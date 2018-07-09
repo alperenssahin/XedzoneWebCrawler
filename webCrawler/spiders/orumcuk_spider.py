@@ -8,7 +8,7 @@ class MySpider(scrapy.Spider):
     def start_requests(self):
 
         for x in range(1,int(self.lmt)):
-            yield scrapy.Request('https://www.gittigidiyor.com/%s?sf=%d' % (self.link , x), callback=self.parse)
+            yield scrapy.Request('%s?sf=%d' % (self.link , x), callback=self.parse)
 
 
     def parse(self, response):
